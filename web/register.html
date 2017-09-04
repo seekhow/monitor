@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>车辆管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+    <!--  <link rel="stylesheet" href="assets/css/style.css"> -->
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/signin.css">
+
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+<!-- Preloader -->
+
+<div class="container">
+    
+    <div class="" id="login-wrapper">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div id="logo-login">
+                    <h1>车辆管理系统
+                        <span>beta</span>
+                    </h1>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="account-box">
+                        <div class="form-group">
+                            <label for="inputUserId">用户ID</label>
+                            <input type="text" id="inputUserId" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword">密码</label>
+                            <input type="password" id="inputPassword" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputSecondPassword">重复密码</label>
+                            <input type="password" id="inputSecondPassword" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputUsername">用户名字(非登录用的用户ID)</label>
+                            <input type="text" id="inputUsername" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="inputGender">用户性别</label>
+                            <input type="text" id="inputGender"  class="form-control">
+                        </div>
+                        <input value="注册" class="btn btn btn-primary pull-right" type="button" onclick="register()">
+                        <input value="返回" class="btn btn btn-primary pull-right" type="button" onclick="window.location='login.html'">
+                    </div>
+					<script>
+						function register() {
+                            var userId=document.getElementById("inputUserId").value;
+                            var userPassword = document.getElementById("inputPassword").value;
+                            var userSecondPassword=document.getElementById("inputSecondPassword").value;
+                            var userName=document.getElementById("inputUsername").value;
+                            var userGender=document.getElementById("inputGender").value;
+                            if(userId==""){
+                                alert("用户ID不能为空");
+                                return;
+                            }
+                            if(userPassword==""){
+                                alert("用户密码不能为空");
+                                return;
+                            }
+                            if(userSecondPassword==""){
+                                alert("请再次输入密码");
+                                return;
+                            }
+                            if(userName==""){
+                                alert("请输入用户名");
+                                return;
+                            }
+                            if(userGender=="") {
+                                alert("用户性别不能为空，请填入man或woman");
+                                return;
+                            }
+                            if(userPassword==userSecondPassword) {
+                                var datetime = getNowFormatDate();
+                                var url = "registerServletAction?user_id=" + userId + "&user_password=" + userPassword + "&user_name=" + userName + "&user_gender=" + userGender+"&user_time="+datetime;
+                                window.location = url;
+                            }else {
+                                alert("两次输入的密码不相同！请检查！");
+                                return;
+                            }
+                        }
+                        function getNowFormatDate() {
+                            var date = new Date();
+                            var seperator1 = "-";
+                            var seperator2 = ":";
+                            var month = date.getMonth() + 1;
+                            var strDate = date.getDate();
+                            if (month >= 1 && month <= 9) {
+                                month = "0" + month;
+                            }
+                            if (strDate >= 0 && strDate <= 9) {
+                                strDate = "0" + strDate;
+                            }
+                            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+                                    + " " + date.getHours() + seperator2 + date.getMinutes()
+                                    + seperator2 + date.getSeconds();
+                            return currentdate;
+                        }
+					</script>
+                    <hr>
+                    <div class="row-block">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p>&nbsp;</p>
+
+
+</div>
+
+
+
+<!--  END OF PAPER WRAP -->
+
+
+
+
+<!-- MAIN EFFECT -->
+<script type="text/javascript" src="map/js/jquery-1.8.3.min.js"></script>
+
+<script type="text/javascript" src="assets/js/preloader.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/load.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
