@@ -24,7 +24,6 @@
 <script src="assets/js/footable/js/footable.filter.js?v=2-0-1" type="text/javascript"></script>
 <script src="assets/js/footable/js/footable.paginate.js?v=2-0-1" type="text/javascript"></script>
 <script src="assets/js/footable/js/footable.paginate.js?v=2-0-1" type="text/javascript"></script>
-<!--下面这个我也不懂是什么，但是得留着-->
 <script type="text/javascript">
   $(function() {
     $('.footable-res').footable();

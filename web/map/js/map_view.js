@@ -18,7 +18,7 @@ var Map=function(){
 		map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 	};
 	var addMarker=function(){	//添加标注
-            var url="http://www.cdylx.org:9090/teach/gis/markers_popup_track/gps_device.jsp?jsoncallback=?";
+            var url=""; //这里的url部分要添加数据源，可以直接改为get方式去获取后台servlet传过来的数据
                 $.getJSON(url,function(data){
                     //alert(data);
                     //alert(JSON.stringify(data));
