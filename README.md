@@ -4,12 +4,12 @@
 当初实习时在参与一个Java web的项目时写的先导项目，即练手项目  
 当时负责前端，所以后端就用java最省事的方式写的(反正想着后端是其他人写好的，现在全栈写多了发现自己还是天真)  
 
-##框架  
+## 框架  
 前端没有用框架，采取最简单的Jquery+ajax方式来进行交互  
 UI库使用的是Bootstrap  
 后端服务器端使用Java开发  
 
-##地图  
+## 地图  
 使用的是百度地图API  官网文档地址:[点击这里](http://lbsyun.baidu.com/index.php?title=jspopular)   
 ![](http://otjjfdfdp.bkt.clouddn.com/17-8-15/98236293.jpg)  
 
@@ -74,7 +74,7 @@ var Map=function(){
 
 ```
 
-##轨迹  
+## 轨迹  
 实现了设备轨迹跟踪回放功能  
 ```
 ...
@@ -96,7 +96,7 @@ var Map=function(){
 
 以及完整的设备里程统计与超速统计  
 
-##区域  
+## 区域  
 实现了在地图上自由勾画一个区域，设备一旦出了规定区域就进行报警通知  
 ![](http://otjjfdfdp.bkt.clouddn.com/17-9-19/12453929.jpg)  
 利用百度地图API提供的几何功能实现的区域管理功能  
@@ -150,14 +150,14 @@ var showRecord = function (json) {
     };
 ```
 
-##CURD  
+## CURD  
 用户管理和设备管理两个最基础的模块实现了完整的增删改查，看导引统8个功能  
 
 ![](http://otjjfdfdp.bkt.clouddn.com/17-9-19/64345031.jpg)  
 ![](http://otjjfdfdp.bkt.clouddn.com/17-9-19/46831812.jpg)  
 ![](http://otjjfdfdp.bkt.clouddn.com/17-9-19/68379442.jpg)  
 
-##总结  
+## 总结  
 从零开始，从前到后，也写的不容易  
 但是一路写过来，现在再回去看当时写的代码，真的是不忍直视  
 想了很久还是把这个项目放了上来  
